@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Calculator</title>
+<link rel='preconnect' href='fonts.googleapis.com'>
+<link rel='preconnect' href='fonts.gstatic.com' crossorigin>
+<link rel='stylesheet' href='fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap;'>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap;')
+*{
+margin:0;
+padding:0;
+font-family:'Roboto', sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4070f4;
+  transition: all 0.3s ease-in-out;
+}
+.container{
+background-color: #fff;
+padding: 35px;
+border-radius: 9px;
+box-shadow: 3px 10px rgba(0, 0, 0, 0.3);
+font-family:'Roboto', sans-serif;
+}
+a{
+text-decoration: none;
+color: #000;
+font-size: 20px;
+}
+p{
+text-decoration: none;
+color: #000;
+font-size: 20px;
+font-family:'Roboto', sans-serif;
+}
+.nos{
+margin: 1vh;
+font-family:'Roboto', sans-serif;
+}
+input{
+background-color: transparent;
+margin: 3px;
+outline: 1px solid green;
+border-radius: 2cm;
+padding: 9px;
+box-shadow: 9px 3px rgba(0, 0, 0, 0.3);
+font-family:'Roboto', sans-serif;
+}
+#button{
+background-color: transparent;
+padding: 7px;
+border-radius: 2cm;
+box-shadow: 9px 10px rgba(0, 0, 0, 0.3);
+transition: all 0.3s ease-in-out;
+}
+#button:hover{
+background-color: greenyellow;
+cursor: pointer;
+}
+#result{
+font-weight: 500;
+font-size: 25px;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<div class="nos">
+<a href='#'>1st number  :  </a><input type='number' value='' id='number'><br>
+<a href='#'>2nd number  :  </a><input type='number' value='' id='numbers'><br><br><br>
+</div>
+<input type='button' id="button" value='+' onclick='return myfun1()' title="Addition">
+<input type='button' id="button" value='-' onclick='return myfun2()' title="Substraction">
+<input type='button' id="button" value='*' onclick='return myfun3()' title="Product">
+<input type='button' id="button" value='/' onclick='return myfun4()' title="Divide">
+<input type='button' id="button" value='%' onclick='return myfun5()' title="Remender">
+<input type='button' id="button" value='Percentage' onclick='return myfun6()' title="Percentage">
+<br>
+<p>The result is : </p><span id='result'></span>
+</div>
+<script>
+function myfun1()
+{
+var a = parseInt(document.getElementById("number").value);
+var b = parseInt(document.getElementById("numbers").value);
+document.getElementById("result").innerHTML = a+b;
+}
+function myfun2()
+{
+var a = parseInt(document.getElementById("number").value);
+var b = parseInt(document.getElementById("numbers").value);
+document.getElementById("result").innerHTML = a-b;
+}
+function myfun3()
+{
+var a = parseInt(document.getElementById("number").value);
+var b = parseInt(document.getElementById("numbers").value);
+document.getElementById("result").innerHTML = a*b;
+}
+function myfun4()
+{
+var a = parseInt(document.getElementById("number").value);
+var b = parseInt(document.getElementById("numbers").value);
+document.getElementById("result").innerHTML = a/b;
+}
+function myfun5()
+{
+var a = parseInt(document.getElementById("number").value);
+var b = parseInt(document.getElementById("numbers").value);
+document.getElementById("result").innerHTML = a%b;
+}
+function myfun6()
+{
+var a = parseInt(document.getElementById("number").value);
+var b = parseInt(document.getElementById("numbers").value);
+document.getElementById("result").innerHTML = a*b/100;
+}
+</script>
+</body>
+</html>
